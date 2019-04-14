@@ -1,0 +1,19 @@
+body {
+    background-color: lightblue;
+}
+
+#pageContent {
+    margin-left: 0px;
+}
+
+#leftContentContainer {
+    background-image: url("photos/profilephoto.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#contentRowContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
