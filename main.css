@@ -2,6 +2,10 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+h2 {
+    font-family: 'Merriweather', serif;
+}
+
 .navbar {
     font-size: 1.5em;
 }
@@ -25,7 +29,6 @@
 
 #leftContentContainer {
     opacity: 0.98;
-    font-family: 'Merriweather', serif;
 }
 
 #rightContentContainer {
