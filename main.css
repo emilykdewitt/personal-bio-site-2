@@ -49,6 +49,15 @@ h2 {
     opacity: .7;
 }
 
+#bioContainer {
+    height: 500px;
+    overflow: auto;
+}
+
+#projectsContainer {
+    padding-top: 15px;
+}
+
 .page-footer {
     display: flex;
     flex-direction: row;
@@ -58,60 +67,4 @@ h2 {
     opacity: 0.5;
 }
 
-/*~~~~~~~~~~~~~~~~~Project Page Styling~~~~~~~~~~~~~~~~~~~~~*/
 
-.projectsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 15px;
-}
-
-.projectPhotoWrap {
-    width: 85%;
-    align-self: center;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-.projectPhotoAndDescriptionWrap {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.projectDescriptionWrap {
-    width: 85%;
-    align-self: center;
-    margin-top: 7px;
-    margin-left: 47px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(117, 132, 146, 0.72);
-    color: #fff;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .2s, visibility .2s;
-}
-
-.projectPhotoAndDescriptionWrap:hover .projectDescriptionWrap {
-    visibility: visible;
-    opacity: 1;
-}
-  
-.projectDescription {
-    transition: .2s;
-    transform: translateY(1em);
-}
-  
-.projectPhotoAndDescriptionWrap:hover .projectDescription {
-    transform: translateY(0);
-}
