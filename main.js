@@ -67,21 +67,29 @@ const createProjectCards = () => {
     let domString = '';
     for(let i = 0; i < projectsArray.length; i++) {
         if (projectsArray[i].available === true) {
-            domString += `<div class="projectCard projectPhotoAndDescriptionWrap">`;
-            domString +=    `<div class="projectPhotoWrap>`
+            domString += `<div class="col-5">`;
+            domString +=    `<div class="card">`
+            domString +=      `<div class="projectPhotoWrap>`
             domString +=        `<img class="projectPhoto" src="${projectsArray[i].screenshot}">`
-            domString +=    `</div>`
-            domString +=    `<div class="projectDescriptionWrap">`
-            domString +=        `<h3>${projectsArray[i].title}</h3>`;
+            domString +=      `</div>`
+            domString +=      `<div class="projectDescriptionWrap">`
+            domString +=        `<h5>${projectsArray[i].title}</h5>`;
             domString +=        `<p>Description: ${projectsArray[i].description}</p>`;
             domString +=        `<p>Technologies used: ${projectsArray[i].technologiesUsed}</p>`;
             domString +=        `<a href=${projectsArray[i].url}>Link</a><br/>`;
             domString +=        `<a href=${projectsArray[i].githubUrl}>GitHub</a>`;
+            domString +=      `</div>`
             domString +=    `</div>`
             domString += `</div>`;
         }
-        printToDom('projectsContainer', domString);
+        printToDom('projectsRow', domString);
 }
+};
+
+const printRandomDomString = () => {
+    let domString = '';
+    domString += `<h2>Hello this function works<h2>`;
+    printToDom('projectsContainer', domString);
 };
 
 const navButtonAction = (e) => {
@@ -100,14 +108,17 @@ const navButtonAction = (e) => {
         bio.style.display = "none";
         tech.style.display = "none";
         projects.style.display = "block";
-        createProjectCards();      
+        createProjectCards();
     } else return
 };
 
 const eventListeners = () => {
     document.getElementById('bioBtn').addEventListener('click', navButtonAction);
     document.getElementById('techBtn').addEventListener('click', navButtonAction);
-    document.getElementById('projectsBtn').addEventListener('click', navButtonAction)
+    document.getElementById('projectsBtn').addEventListener('click', navButtonAction);
+    document.getElementById('homeBtn').addEventListener('click', homePageLoad);
+    document.getElementById('brandBtn').addEventListener('click', homePageLoad);
+
 };
 
 const init = () => {
