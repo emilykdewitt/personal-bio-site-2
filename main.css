@@ -56,7 +56,42 @@ h2 {
 
 #projectsContainer {
     padding-top: 15px;
+    height: 625px;
+    overflow-y: scroll;
 }
+
+#projectsRow {
+    justify-content: space-around;
+}
+
+.img_wrap {
+    position: relative;
+    /* height: 200px;
+    width: 257px; */
+    margin-top: 10px;
+}
+  
+.img_description {
+    text-align: center;
+    vertical-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+}
+  
+.img_wrap:hover .img_description {
+    visibility: visible;
+    opacity: 1;
+  }
 
 .page-footer {
     display: flex;
